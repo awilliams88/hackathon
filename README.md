@@ -24,6 +24,10 @@ social posts.
   project.
 - `ARCHITECTURE.md` defines the shared project structure and code standards.
 - `MODELS.md` tracks model choices and sponsor alignment across submissions.
+- `AWARDS.md` maps every visible award surface to the project portfolio.
+- `DECISIONS.md` records thread decisions so future project repos stay
+  consistent.
+- `LOCAL_MODELS.md` documents what can realistically run on the local M1 iMac.
 - `GUIDELINES.md` summarizes the hackathon rules, awards, and submission
   checklist.
 - `RESOURCES.md` collects every link from the kickoff transcript.
@@ -74,6 +78,8 @@ Every final submission must include:
 - Keep all GitHub repos public.
 - Keep all Spaces public unless the hackathon rules require otherwise.
 - Preserve Codex-authored GitHub history for OpenAI/Codex-related evaluation.
+- Push the same Git commits to GitHub and the HF Space remote so project commit
+  history is consistent across both surfaces.
 - Prefer small, complete apps over large unfinished systems.
 - Use Modal credits for training, batch jobs, sandboxes, or heavier experiments
   only where they improve award chances.

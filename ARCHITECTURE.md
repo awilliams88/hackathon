@@ -118,5 +118,8 @@ Every project README must include:
 - Hugging Face operations use `hf`.
 - Browser use is reserved for local app testing and screenshots.
 - Commit history should remain authored by `Codex <codex@openai.com>`.
+- After a project repo exists, push normal releases to both GitHub and the HF
+  Space Git remote. Avoid `hf upload` as the normal path because it creates a
+  separate HF-only commit history.
 - Repo names should match between GitHub and Hugging Face Space slugs whenever
   possible.

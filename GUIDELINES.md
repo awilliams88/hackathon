@@ -53,19 +53,19 @@ Thousand Token Wood:
 
 ## Award surfaces
 
-- Main track podiums for Backyard AI and Thousand Token Wood.
-- Community Choice.
-- OpenBMB sponsor awards.
-- OpenAI track.
-- NVIDIA Nemotron Quest.
-- Modal awards.
-- Bonus Quest Champion.
-- Off-Brand Award.
-- Tiny Titan for apps built on genuinely tiny models, around 4B parameters or
-  less.
-- Best Demo.
-- Best Agent.
-- Judges' Wildcard.
+- Backyard AI: top four practical submissions.
+- Thousand Token Wood: top four whimsical or creative submissions.
+- Community Choice: one community-voted winner.
+- OpenBMB Awards: three prizes in each of the two main tracks.
+- OpenAI Track: OpenAI's own podium across all submissions.
+- NVIDIA Nemotron Quest: two physical GPUs for standout Nemotron builds.
+- Modal Awards: top Modal-powered apps.
+- Bonus Quest Champion: most merit badges stacked on one project.
+- Off-Brand Award: best custom UI beyond the default Gradio look.
+- Tiny Titan: best app built on a genuinely tiny model, around <=4B parameters.
+- Best Demo: great app, demo video, and social post.
+- Best Agent: best agentic app under the 32B cap.
+- Judges' Wildcard: standout project that does not fit a normal category.
 
 ## Sponsor notes from kickoff
 
