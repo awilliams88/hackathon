@@ -88,7 +88,7 @@ Keep separation of concern without adding ceremony:
 - Keep names direct and boring. Prefer clear functions over premature classes.
 - Classes are useful for stateful services, model clients, or configuration that
   needs dependency injection. Do not add them only to look more formal.
-- **Clean Code & Imports**: Put all imports at the very top of each file. Avoid dynamic or inline imports inside functions.
+- **Clean Code & Imports**: Put all imports at the very top of each file. Avoid dynamic or inline imports inside functions. **Exception**: Modal remote functions (decorated with `@app.function`) must import their container-only dependencies (e.g. `torch`, `peft`, `datasets`) inside the function body, because those packages are installed inside the remote GPU container and are not available in the local development environment.
 - **Comment Styling**: Place comments above the code or code block they describe. Never write inline comments (in front of code on the same line). Ensure comments are short, single-lined, and meaningful. Do not use structural or numeric labels (like `Step 1`, `Step 2`).
 - **No Ignores**: Fix all lint, formatting, or type-checking issues directly in the code rather than using comments (like `# type: ignore` or `# noqa`) to disable/bypass rules. If necessary, adjust project-wide tool configurations (e.g. `pyrightconfig.json`).
 
