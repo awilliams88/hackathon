@@ -8,7 +8,7 @@ projects that each target different awards cleanly.
 
 | Project | Primary model path | Secondary model options | Sponsor surface | Prize angle |
 | --- | --- | --- | --- | --- |
-| NeighborDocs | `nvidia/NVIDIA-Nemotron-Parse-v1.1` + <=4B reasoner | `openbmb/MiniCPM-V-4.6`, Cohere Tiny Aya family (3.35B) | NVIDIA, OpenBMB, Cohere | Backyard AI, Tiny Titan, Best Demo |
+| NeighborDocs | `openbmb/MiniCPM-1B-sft-bf16` | None (Single Sponsor Focus) | OpenBMB | Backyard AI, Tiny Titan, Best Demo |
 | Pocket Tutor From Photos | `openbmb/MiniCPM-V-4.6` | MiniCPM 1B/4B text, Cohere Tiny Aya family (3.35B) | OpenBMB, Cohere | Backyard AI, Best Agent, multilingual usefulness |
 | Flux Costume Booth | `black-forest-labs/FLUX.2-klein` | FLUX.2 [klein] LoRA/fine-tune path | Black Forest Labs, Modal | Thousand Token Wood, Off-Brand, Well-Tuned |
 | Tiny Quest Radio | Cohere Transcribe | OpenBMB VoxCPM / MiniCPM-o voice path, small text model | Cohere, OpenBMB | Thousand Token Wood, Best Demo, Best Agent |
@@ -89,17 +89,9 @@ Gradio Workflow Remix Lab:
 
 ## NeighborDocs first project decision
 
-NeighborDocs should expose multiple sponsor-aligned model strategies in the UI,
-but the recommended default is:
+NeighborDocs uses `openbmb/MiniCPM-1B-sft-bf16` as a single, focused sponsor model to target the OpenBMB cash prize track.
 
-1. `nvidia/NVIDIA-Nemotron-Parse-v1.1` for document extraction.
-2. A <=4B text model for summary, obligations, deadlines, and next actions.
-3. Optional `openbmb/MiniCPM-V-4.6` for scanned documents and screenshots.
-4. Optional Cohere tiny multilingual model for non-English explanation.
+This keeps the app focused and makes sponsor targeting clear to judges.
 
-This keeps the app focused while making sponsor targeting visible to judges.
+Runtime note: NeighborDocs can stay on `cpu-basic` or be switched to `zero-a10g` when the ZeroGPU function is called. The model inference utilizes local GPU when CUDA is available, and falls back to a rule-based CPU parser/extractor or serverless API fallback.
 
-Runtime note: NeighborDocs should stay on `cpu-basic` while the rule-based MVP
-is live. The project has a ZeroGPU hook for the final NVIDIA/OpenBMB/Cohere
-model path, and the Space should move to `zero-a10g` only after the real model
-call is attached inside the decorated function.
