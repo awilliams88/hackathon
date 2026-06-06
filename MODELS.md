@@ -35,6 +35,19 @@ projects that each target different awards cleanly.
 | Modal | Modal sandboxes and GPU jobs | platform | Fine-tune, batch jobs, repo sandboxing | Use for work that directly improves prize odds. |
 | OpenAI | Codex / GitHub commit history | toolchain | All projects | Maintain visible Codex-authored commits for OpenAI sponsor evaluation. |
 
+## Sponsor resource links
+
+| Sponsor | Link |
+| --- | --- |
+| Black Forest Labs Flux guide | https://huggingface.co/blog/blackforestlabs/flux-1-finetuning |
+| Black Forest Labs AI Toolkit | https://github.com/ostris/ai-toolkit |
+| OpenBMB MiniCPM GitHub | https://github.com/OpenBMB/MiniCPM |
+| OpenBMB model hub | https://huggingface.co/openbmb |
+| NVIDIA NeMo cookbooks | https://github.com/NVIDIA/NeMo |
+| NVIDIA Nemotron collection | https://huggingface.co/models?search=nvidia%2Fnemotron |
+| JetBrains Milo 2 | https://huggingface.co/JetBrains/Milo-2-12B |
+| Cohere Labs blog | https://cohere.com/blog/ |
+
 ## Per-project uniqueness
 
 NeighborDocs:

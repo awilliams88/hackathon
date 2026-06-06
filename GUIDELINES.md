@@ -22,6 +22,11 @@ Transcript clarification: multiple models are allowed as long as each model is
 under the 32B total-parameter cap. The cap is based on total parameters, not
 active parameters.
 
+Practical interpretation for our portfolio: a single app may combine a parser,
+vision model, text reasoner, ASR model, TTS model, embedding model, safety
+model, or fine-tuned adapter. Each individual base model must stay below the
+32B total-parameter limit, and the project README must list every model used.
+
 ## Main tracks
 
 Backyard AI:

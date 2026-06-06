@@ -26,6 +26,7 @@ social posts.
 - `MODELS.md` tracks model choices and sponsor alignment across submissions.
 - `GUIDELINES.md` summarizes the hackathon rules, awards, and submission
   checklist.
+- `RESOURCES.md` collects every link from the kickoff transcript.
 - `build-small-strategy.md` keeps the original working strategy notes.
 
 Each project must remain deployable as its own Hugging Face Space and public
@@ -39,6 +40,8 @@ Every project repo must include:
 - A GitHub repo link in the Space README.
 - Clear setup and local run instructions.
 - A model section with model names, sponsors, and parameter-count compliance.
+- Multiple models are allowed in one project if every model is under 32B total
+  parameters.
 - A short architecture section.
 - `app.py`, `requirements.txt`, `run.sh`, and `src/<project_slug>/`.
 - Lint, format-check, and Python compile support through `./run.sh verify`.
