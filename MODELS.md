@@ -1,97 +1,46 @@
-# Model Plan
+# Sponsor Model Plan
 
-This file tracks sponsor-recommended model options and maps them to projects.
-The goal is not to use every model everywhere; the goal is to choose distinctive
-projects that each target different awards cleanly.
+This file tracks sponsor-recommended models (OpenBMB, Black Forest Labs, JetBrains, Cohere) and how we utilize **Modal** ($250 credit) to fine-tune and quantize them. All models used must remain under the **32B total-parameter cap**.
 
-## Portfolio model priorities
+---
 
-| Project | Primary model path | Secondary model options | Sponsor surface | Prize angle |
+## 1. Sponsor Model Inventory
+
+| Sponsor | Model / Family | Size | Best Use | Notes |
 | --- | --- | --- | --- | --- |
-| NeighborDocs | `openbmb/MiniCPM-1B-sft-bf16` | None (Single Sponsor Focus) | OpenBMB | Backyard AI, Tiny Titan, Best Demo |
-| Pocket Tutor From Photos | `openbmb/MiniCPM-V-4.6` | MiniCPM 1B/4B text, Cohere Tiny Aya family (3.35B) | OpenBMB, Cohere | Backyard AI, Best Agent, multilingual usefulness |
-| Flux Costume Booth | `black-forest-labs/FLUX.2-klein` | FLUX.2 [klein] LoRA/fine-tune path | Black Forest Labs, Modal | Thousand Token Wood, Off-Brand, Well-Tuned |
-| Tiny Quest Radio | Cohere Transcribe | OpenBMB VoxCPM / MiniCPM-o voice path, small text model | Cohere, OpenBMB | Thousand Token Wood, Best Demo, Best Agent |
-| Roast My Repo | `JetBrains/Milo-2-12B` | OpenAI/Codex build logs, Modal sandbox | JetBrains, OpenAI, Modal | Best Agent, Codex evidence, developer utility |
-| Gradio Workflow Remix Lab | Gradio Workflow + small HF models | MiniCPM, Cohere, Flux, Nemotron components | Gradio/HF, multi-sponsor | Bonus Quest Champion, Off-Brand |
+| **OpenBMB** | `openbmb/MiniCPM-1B-sft-bf16` | 1.2B | NeighborDocs, Tiny Titan reasoning | Lightweight, fast text model optimized for on-device/Gradio deployment. |
+| **OpenBMB** | `openbmb/MiniCPM3-4B` | 4.0B | Pocket Tutor reasoning, agents | Advanced compact reasoning model, great balance of speed and logic. |
+| **OpenBMB** | `openbmb/MiniCPM-V-4.6` | ~8B | Pocket Tutor visual OCR, diagrams | Leading multimodal model for scanned images and tutoring. |
+| **Cohere** | `CohereLabs/tiny-aya-global` | 3.35B | Tiny Quest Radio multilingual narrative | Compact multilingual instruction-tuned model covering 70+ languages. |
+| **Cohere** | Cohere Transcribe | ~2B | Tiny Quest Radio voice command | Speech-to-text model for audio interface. |
+| **Black Forest Labs** | `black-forest-labs/FLUX.2-klein` | 4.0B | Flux Costume Booth image generation | Visual output generation; small enough to train LoRAs in under an hour. |
+| **JetBrains** | `JetBrains/Milo-2-12B` | 12B | Roast My Repo code intelligence | High-quality, specialized model for repository roasts and code analysis. |
 
-## Sponsor-recommended model inventory
+---
 
-| Sponsor | Model or family | Approx size | Best use in our portfolio | Notes |
-| --- | --- | ---: | --- | --- |
-| NVIDIA | `nvidia/NVIDIA-Nemotron-Parse-v1.1` | <1B | NeighborDocs document parsing | Extracts structured text, tables, classes, and bounding boxes from documents. |
-| NVIDIA | Nemotron Nano / Nano Omni family | under 32B | Reasoning, multimodal document reasoning, agents | Candidate for stronger document and agent flows. |
-| NVIDIA | Nemotron speech / ASR models | under 32B | Tiny Quest Radio | Candidate for voice and accessibility tasks. |
-| NVIDIA | Nemotron safety models | under 32B | Any public user-input app | Optional input/output safety layer. |
-| OpenBMB | `openbmb/MiniCPM-V-4.6` | 1B class | Pocket Tutor, NeighborDocs scanned docs | Strong image understanding, OCR-heavy, document/photo tutoring model. |
-| OpenBMB | MiniCPM 1B text model | 1B | Tiny local assistant path | Strong Tiny Titan candidate. |
-| OpenBMB | MiniCPM 4.1 8B text model | 8B | Stronger tutoring/reasoning fallback | Use when 1B quality is not enough. |
-| OpenBMB | MiniCPM-o / Omni / VoxCPM voice path | under 32B | Tiny Quest Radio | Candidate for voice, TTS, and omni interaction. |
-| Black Forest Labs | `black-forest-labs/FLUX.2-klein` | 4B / 9B | Flux Costume Booth | Image generation and editing; small enough to fine-tune with LoRA in an hour. |
-| Black Forest Labs | FLUX.2 [klein] LoRA fine-tuning path | adapter | Flux Costume Booth | Modal-backed fine-tune route for Well-Tuned badge. |
-| JetBrains | `JetBrains/Milo-2-12B` | 12B | Roast My Repo | Code-focused model for repo review and developer tooling. |
-| Cohere | Cohere Transcribe | 2B | Tiny Quest Radio, accessibility docs | Low-latency ASR path. |
-| Cohere | Tiny Aya multilingual LLM family | 3.35B | NeighborDocs, Pocket Tutor | Cohere's official multilingual family (Global/Water/Fire/Earth) covering 70+ languages. |
-| Modal | Modal sandboxes and GPU jobs | platform | Fine-tune, batch jobs, repo sandboxing | Use for work that directly improves prize odds. |
-| OpenAI | Codex / GitHub commit history | toolchain | All projects | Maintain visible Codex-authored commits for OpenAI sponsor evaluation. |
+## 2. Modal Fine-Tuning & Quantization Strategy ($250 Credit)
 
-## Sponsor resource links
+We have **$250 in Modal credits** to fine-tune, quantize, and publish custom models to the Hugging Face Hub. This is key to unlocking the **Well-Tuned** and **Llama Champion** merit badges.
 
-| Sponsor | Link |
-| --- | --- |
-| Black Forest Labs Flux guide | https://huggingface.co/blog/blackforestlabs/flux-1-finetuning |
-| Black Forest Labs AI Toolkit | https://github.com/ostris/ai-toolkit |
-| OpenBMB MiniCPM GitHub | https://github.com/OpenBMB/MiniCPM |
-| OpenBMB model hub | https://huggingface.co/openbmb |
-| NVIDIA NeMo cookbooks | https://github.com/NVIDIA/NeMo |
-| NVIDIA Nemotron collection | https://huggingface.co/models?search=nvidia%2Fnemotron |
-| JetBrains Milo 2 | https://huggingface.co/JetBrains/Milo-2-12B |
-| Cohere Labs blog | https://cohere.com/blog/ |
+### Fine-Tuning (Well-Tuned Badge)
+- **Image/Style Persona**: Fine-tune a LoRA on `FLUX.2-klein` using Modal GPU instances (e.g., A100/H100) with a custom style dataset (explorer, robot, puppet) in 15-30 minutes.
+- **Text/Behavior**: Fine-tune `MiniCPM-1B-sft-bf16` or `tiny-aya-global` with custom dataset instructions on Modal and export the adapter to Hugging Face.
 
-## Per-project uniqueness
+### Quantization & llama.cpp (Llama Champion Badge)
+- After fine-tuning, use a Modal GPU/CPU sandbox to run `llama.cpp` tools:
+  1. Convert the PyTorch/BF16 weights to GGUF.
+  2. Quantize the GGUF model to 4-bit precision (Q4_K_M) to make it run extremely fast on a basic CPU Space.
+  3. Publish the GGUF model repository to the Hugging Face Hub.
 
-NeighborDocs:
+---
 
-- A practical document helper for real paperwork.
-- Primary sponsor signal: NVIDIA document intelligence.
-- Distinctive hook: turns messy everyday forms into obligations, deadlines, and
-  next actions.
+## 3. Project Model Mapping
 
-Pocket Tutor From Photos:
-
-- A photo-based tutor for homework, worksheets, and study notes.
-- Primary sponsor signal: OpenBMB MiniCPM-V.
-- Distinctive hook: local-first image understanding with multilingual support.
-
-Flux Costume Booth:
-
-- A playful image transformation booth.
-- Primary sponsor signal: Black Forest Labs Flux.
-- Distinctive hook: shareable visual outputs and possible LoRA style fine-tune.
-
-Tiny Quest Radio:
-
-- A voice-driven micro adventure app.
-- Primary sponsor signal: Cohere Transcribe plus OpenBMB voice/TTS.
-- Distinctive hook: audio-first demo with a tiny story agent.
-
-Roast My Repo:
-
-- A developer-facing repo review agent.
-- Primary sponsor signal: JetBrains Milo 2 plus OpenAI/Codex build evidence.
-- Distinctive hook: useful code review with public Codex-authored commits.
-
-Gradio Workflow Remix Lab:
-
-- A visual pipeline playground using Gradio Workflow.
-- Primary sponsor signal: Hugging Face / Gradio ecosystem.
-- Distinctive hook: lets judges remix small-model workflows themselves.
-
-## NeighborDocs first project decision
-
-NeighborDocs uses `openbmb/MiniCPM-1B-sft-bf16` as a single, focused sponsor model to target the OpenBMB cash prize track.
-
-This keeps the app focused and makes sponsor targeting clear to judges.
-
-Runtime note: NeighborDocs can stay on `cpu-basic` or be switched to `zero-a10g` when the ZeroGPU function is called. The model inference utilizes local GPU when CUDA is available, and falls back to a rule-based CPU parser/extractor or serverless API fallback.
-
+| Project | Primary Model | Role | Runtime Target |
+| --- | --- | --- | --- |
+| **NeighborDocs** | `openbmb/MiniCPM-1B-sft-bf16` | Document text reasoning | CPU basic with ZeroGPU local load |
+| **Pocket Tutor** | `openbmb/MiniCPM-V-4.6` | Image diagram/homework parsing & tutoring | ZeroGPU (multimodal) |
+| **Flux Costume Booth** | `black-forest-labs/FLUX.2-klein` + custom Modal LoRA | Personal portrait styling | ZeroGPU / Modal inference |
+| **Tiny Quest Radio** | `CohereLabs/tiny-aya-global` (quantized to GGUF) | Narrative/Adventure story generation | CPU basic (running via `llama.cpp`) |
+| **Roast My Repo** | `JetBrains/Milo-2-12B` | Repository file analysis | ZeroGPU / Serverless fallback |
+| **Modal-Tuner** | Custom training container on Modal | Fine-tunes and quantizes MiniCPM/Aya | Modal GPU jobs + Gradio frontend |

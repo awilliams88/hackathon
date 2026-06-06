@@ -1,67 +1,60 @@
-# Award Coverage Strategy
+# Award & Badge Strategy
 
-This file maps every visible prize surface from the provided screenshots and
-kickoff transcript to our planned projects. The operating goal is maximum prize
-coverage through several focused submissions, not one overloaded app.
+This document maps the official Build Small Hackathon cash prizes and merit badges to our project portfolio. The goal is maximum prize coverage and stacking all merit badges.
 
-## Award surfaces
+## 1. Trophy Cabinet (Cash Prize Pools)
 
-| Award surface | Prize signal | Best project targets | Why this can win |
-| --- | --- | --- | --- |
-| Backyard AI | Top four practical apps | NeighborDocs, Pocket Tutor, Roast My Repo | Real everyday workflows: paperwork, tutoring, developer review. |
-| Thousand Token Wood | Top four creative apps | Flux Costume Booth, Tiny Quest Radio, Gradio Workflow Remix Lab | Playful, visual, audio-first, and remixable experiences. |
-| Community Choice | $2,000, community-voted | Flux Costume Booth, Tiny Quest Radio | Shareable outputs and fast social/demo appeal. |
-| OpenBMB Awards | $10,000 total, three prizes in each track | Pocket Tutor, Tiny Quest Radio, NeighborDocs | Uses MiniCPM vision/text/voice paths suggested by sponsor. |
-| OpenAI Track | $10,000 total across all submissions | All repos, especially Roast My Repo and NeighborDocs | Public Codex-authored GitHub history and Codex-led implementation. |
-| NVIDIA Nemotron Quest | Two RTX 5080 GPUs | None (Not targeting, focused on cash prizes) | Nemotron Parse/document intelligence is not targeted. |
-| Modal Awards | $20,000 in Modal credits | Flux Costume Booth, Roast My Repo, any fine-tuning path | Use Modal where it materially improves fine-tuning, sandboxes, or batch jobs. |
-| Bonus Quest Champion | $2,000 | Gradio Workflow Remix Lab, Flux Costume Booth | Stack badges: Off-Grid, Well-Tuned, Off-Brand, Llama Champion, Sharing is Caring, Field Notes. |
-| Off-Brand Award | $1,500 | Flux Costume Booth, Gradio Workflow Remix Lab, polished NeighborDocs | Custom UI beyond default Gradio styling. |
-| Tiny Titan | $1,500 | NeighborDocs (1.2B), Pocket Tutor tiny model path | Use genuinely tiny models, around <=4B parameters. |
-| Best Demo | $1,000 | NeighborDocs, Flux Costume Booth, Tiny Quest Radio | Clear before/after flow, strong demo video, clear social post. |
-| Best Agent | $1,000 | Roast My Repo, Pocket Tutor, Tiny Quest Radio | Visible multi-step reasoning and action flow under the 32B cap. |
-| Judges' Wildcard | $1,000 | Any polished unusual app | Reserve for the strongest surprising project after we see what works. |
+### Main Track Awards ($18,000)
+- **Backyard AI** (Practical everyday apps): 
+  - 1st Place: **$4,000** | 2nd Place: **$2,500** | 3rd Place: **$1,500** | 4th Place: **$1,000**
+- **Thousand Token Wood** (Whimsical, playful, creative apps):
+  - 1st Place: **$4,000** | 2nd Place: **$2,500** | 3rd Place: **$1,500** | 4th Place: **$1,000**
+- **Community Choice (by Hugging Face)**:
+  - 1 Winner (voted by the community): **$2,000**
 
-## Coverage matrix
+### Sponsor Awards
+- **OpenBMB Awards** ($10,000 total): Three prizes in each of the two main tracks for outstanding OpenBMB picks (utilizing MiniCPM models):
+  - 1st Place: **$2,500** | 2nd Place: **$1,500** | 3rd Place: **$1,000**
+- **OpenAI Track** ($10,000 total): OpenAI's own podium across all submissions (evidence of Codex-authored commit logs and OpenAI utility):
+  - 1st Place: **$5,000** | 2nd Place: **$3,000** | 3rd Place: **$2,000**
+- **Other Cash/Sponsor Awards**:
+  - **Cohere Awards**: **$5,000** cash prize pool.
+  - **JetBrains Awards**: **$5,000** cash prize pool.
+  - **Black Forest Labs Awards**: **$3,000** cash prize pool.
+  - **Modal Awards**: **$20,000** in Modal credits for top Modal-powered submissions.
 
-| Project | Backyard | Thousand Token Wood | Sponsor | Special awards | Priority |
-| --- | --- | --- | --- | --- | --- |
-| NeighborDocs | Yes | No | OpenBMB, OpenAI | Tiny Titan, Best Demo, Off-Brand | First |
-| Pocket Tutor From Photos | Yes | No | OpenBMB, Cohere | Best Agent, Tiny Titan | Second |
-| Flux Costume Booth | No | Yes | Black Forest Labs, Modal | Community Choice, Off-Brand, Well-Tuned, Best Demo | Third |
-| Tiny Quest Radio | No | Yes | Cohere, OpenBMB | Best Demo, Best Agent, Community Choice | Fourth |
-| Roast My Repo | Yes | Maybe | JetBrains, OpenAI, Modal | Best Agent, OpenAI Track | Fifth |
-| Gradio Workflow Remix Lab | Maybe | Yes | Hugging Face/Gradio, multi-sponsor | Bonus Quest Champion, Off-Brand, Judges' Wildcard | Sixth |
+### Special Awards ($8,000)
+- **Bonus Quest Champion ($2,000)**: The most merit badges stacked on a single project sash.
+- **Off-Brand Award ($1,500)**: Best custom UI pushing past default Gradio styling (`gr.Server` is your friend).
+- **Tiny Titan ($1,500)**: Best app built on a genuinely tiny model (<=4B parameters).
+- **Best Demo ($1,000)**: Great app, outstanding demo video, and clear social post.
+- **Best Agent ($1,000)**: Best agentic app (under the 32B parameter cap).
+- **Judges' Wildcard ($1,000)**: Standout creative entry that fits no other category.
 
-## Execution rule
+---
 
-Each project should have one primary award story and one or two secondary award
-stories. Do not dilute a project by trying to hit every badge at once.
+## 2. Merit Badge Stacking Strategy (For "Bonus Quest Champion")
 
-## Project 1 award story
+To win the **Bonus Quest Champion ($2,000)** and maximize our special award chances, we target every single merit badge across our portfolio, with a special focus on stacking them in our meta-tool **Modal-Tuner**:
 
-NeighborDocs should be positioned as:
+| Badge | Criteria | How we target it |
+| --- | --- | --- |
+| **Off the Grid** | Run models entirely locally within the app environment (no third-party cloud APIs). | Run models locally on CPU/WebGPU in the app or on ZeroGPU. |
+| **Well-Tuned** | Use a fine-tuned model published on Hugging Face. | Fine-tune MiniCPM or Tiny Aya using our **$250 Modal credit**, export to Hugging Face, and load it. |
+| **Off-Brand** | Implement custom UI beyond the default Gradio look. | Use custom CSS overrides and custom JS (`styles.py` and `gr.HTML`/`gr.Server`). |
+| **Llama Champion** | Run the model locally using `llama.cpp` / GGUF. | Deploy a GGUF format model and run it via `llama-cpp-python` in the Space. |
+| **Sharing is Caring** | Share the agent trace/run details on the Hugging Face Hub. | Publish structured run execution logs, user inputs, and outputs to a Hugging Face dataset automatically. |
+| **Field Notes** | Publish a detailed report or blog post detailing the build and lessons learned. | Create a comprehensive markdown report of the project's architecture, training run, and findings. |
 
-- Main track: Backyard AI.
-- Sponsor target: OpenBMB ($10,000 cash pool).
-- Special awards: Tiny Titan, Best Demo, Off-Brand.
-- OpenAI track evidence: Codex-authored GitHub history.
+---
 
+## 3. Project Portfolio Award Map
 
-The app should demonstrate a concrete before/after workflow:
-
-1. Upload or choose a sample document.
-2. Select a sponsor model strategy.
-3. Extract document text.
-4. Surface dates, amounts, obligations, and risks.
-5. Produce a plain-English next-action checklist.
-
-## Demo requirements
-
-Every final project must include:
-
-- Demo video link in the Space README.
-- Social post link in the Space README.
-- GitHub link in the Space README.
-- Model table with exact model IDs and parameter counts.
-- Sponsor/badge targeting in plain language.
+| Project | Trail | Target Sponsor | Badge Stacking | Special Awards Targeted |
+| --- | --- | --- | --- | --- |
+| **NeighborDocs** | Backyard AI | OpenBMB, OpenAI | Off the Grid, Off-Brand | Tiny Titan (1.2B), Best Demo |
+| **Pocket Tutor** | Backyard AI | OpenBMB | Off the Grid, Off-Brand | Best Agent, Tiny Titan (4B) |
+| **Flux Costume Booth** | Thousand Token Wood | Black Forest Labs, Modal | Well-Tuned (Modal LoRA), Off-Brand | Best Demo, Community Choice |
+| **Tiny Quest Radio** | Thousand Token Wood | Cohere | Off the Grid, Llama Champion (llama.cpp) | Judges' Wildcard, Tiny Titan |
+| **Roast My Repo** | Backyard AI | JetBrains, OpenAI | Off the Grid, Sharing is Caring | Best Agent, OpenAI Track |
+| **Modal-Tuner** | Backyard / Developer | Modal, OpenBMB, Cohere | **All Badges** (Off-Grid, Well-Tuned, Off-Brand, Llama, Sharing, Field Notes) | Bonus Quest Champion, Best Agent, Judges' Wildcard |
