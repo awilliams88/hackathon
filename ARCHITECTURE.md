@@ -9,40 +9,30 @@ parent repo tracks strategy, shared standards, model choices, and project links.
 ```text
 README.md
 ARCHITECTURE.md
-GUIDELINES.md
 MODELS.md
-plans/
+PROJECTS.md
+AWARDS.md
 projects/
   <project-slug>/  # Git submodule for the independent project repo
 ```
 
 The parent repo is not a runtime app. It should stay focused on coordination,
-documentation, project links, submission status, and shared decisions.
+documentation, project links, and submission status.
 
 ## Standard project structure
 
-Every project repo should follow this structure unless the project has a clear
-reason to differ:
+Every project repo should follow this simplified flat structure:
 
 ```text
 README.md
 app.py
+config.py
+core.py
+ui.py
+styles.py      # optional, for custom CSS
+runtime.py     # optional, for runtime patches
 requirements.txt
 run.sh
-src/
-  <project_slug>/
-    __init__.py
-    config.py
-    core.py
-    gpu.py      # optional, only when a ZeroGPU/dedicated GPU path is planned
-    ui.py
-```
-
-Optional folders:
-
-```text
-assets/      # images, screenshots, demo media, CSS, examples
-examples/    # sample inputs for demos and screenshots
 ```
 
 ## File responsibilities
@@ -53,13 +43,12 @@ examples/    # sample inputs for demos and screenshots
   UI factory, and launches the Gradio app.
 - `requirements.txt`: one runtime dependency file for Space and local setup.
 - `run.sh`: creates `.venv`, installs dependencies, installs local-only tooling,
-  runs lint/format checks, and launches the app.
-- `src/<project_slug>/config.py`: project constants, model names, limits, labels.
-- `src/<project_slug>/core.py`: project logic and model orchestration.
-- `src/<project_slug>/gpu.py`: optional GPU runtime adapter. Use this for
-  `@spaces.GPU` functions or dedicated GPU model wrappers; do not place GPU
-  orchestration in `app.py`.
-- `src/<project_slug>/ui.py`: Gradio layout and event wiring.
+  runs lint/format/type checks, and launches the app.
+- `config.py`: project constants, model names, limits, and labels.
+- `core.py`: project logic, model loading, GPU/ZeroGPU detection, and model inference.
+- `ui.py`: Gradio layout and event wiring.
+- `styles.py`: custom CSS for premium styling.
+
 
 ## Dependency policy
 
@@ -99,6 +88,8 @@ Keep separation of concern without adding ceremony:
 - Keep names direct and boring. Prefer clear functions over premature classes.
 - Classes are useful for stateful services, model clients, or configuration that
   needs dependency injection. Do not add them only to look more formal.
+- **Code Comments**: Include short, concise, simple, easy-to-understand, and meaningful comments explaining the purpose of each function and non-obvious logic block. Avoid cluttering obvious code, but ensure the architecture remains readable.
+
 
 ## Documentation standard
 
@@ -138,6 +129,6 @@ Every project README must include:
   startup when no decorated function is detected.
 - Do not add `spaces` to `requirements.txt`; the Hugging Face runtime provides
   it for ZeroGPU.
-- Put every ZeroGPU entry point in `src/<project_slug>/gpu.py`, then call it
-  from core logic or Gradio event handlers.
+- Put every ZeroGPU entry point (decorated with `@spaces.GPU`) directly in the project's `core.py`, allowing the app to run on CPU, ZeroGPU, or any GPU seamlessly by default.
 - Record the exact hardware choice and switch command in each project README.
+
