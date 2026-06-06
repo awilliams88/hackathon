@@ -8,9 +8,9 @@ projects that each target different awards cleanly.
 
 | Project | Primary model path | Secondary model options | Sponsor surface | Prize angle |
 | --- | --- | --- | --- | --- |
-| NeighborDocs | `nvidia/NVIDIA-Nemotron-Parse-v1.1` + <=4B reasoner | `openbmb/MiniCPM-V-4.6`, Cohere tiny multilingual LLM | NVIDIA, OpenBMB, Cohere | Backyard AI, Tiny Titan, Best Demo |
-| Pocket Tutor From Photos | `openbmb/MiniCPM-V-4.6` | MiniCPM 1B/4B text, Cohere tiny multilingual LLM | OpenBMB, Cohere | Backyard AI, Best Agent, multilingual usefulness |
-| Flux Costume Booth | `black-forest-labs/FLUX.1-Kontext-dev` | Flux LoRA/fine-tune path | Black Forest Labs, Modal | Thousand Token Wood, Off-Brand, Well-Tuned |
+| NeighborDocs | `nvidia/NVIDIA-Nemotron-Parse-v1.1` + <=4B reasoner | `openbmb/MiniCPM-V-4.6`, Cohere Tiny Aya family (3.35B) | NVIDIA, OpenBMB, Cohere | Backyard AI, Tiny Titan, Best Demo |
+| Pocket Tutor From Photos | `openbmb/MiniCPM-V-4.6` | MiniCPM 1B/4B text, Cohere Tiny Aya family (3.35B) | OpenBMB, Cohere | Backyard AI, Best Agent, multilingual usefulness |
+| Flux Costume Booth | `black-forest-labs/FLUX.2-klein` | FLUX.2 [klein] LoRA/fine-tune path | Black Forest Labs, Modal | Thousand Token Wood, Off-Brand, Well-Tuned |
 | Tiny Quest Radio | Cohere Transcribe | OpenBMB VoxCPM / MiniCPM-o voice path, small text model | Cohere, OpenBMB | Thousand Token Wood, Best Demo, Best Agent |
 | Roast My Repo | `JetBrains/Milo-2-12B` | OpenAI/Codex build logs, Modal sandbox | JetBrains, OpenAI, Modal | Best Agent, Codex evidence, developer utility |
 | Gradio Workflow Remix Lab | Gradio Workflow + small HF models | MiniCPM, Cohere, Flux, Nemotron components | Gradio/HF, multi-sponsor | Bonus Quest Champion, Off-Brand |
@@ -27,11 +27,11 @@ projects that each target different awards cleanly.
 | OpenBMB | MiniCPM 1B text model | 1B | Tiny local assistant path | Strong Tiny Titan candidate. |
 | OpenBMB | MiniCPM 4.1 8B text model | 8B | Stronger tutoring/reasoning fallback | Use when 1B quality is not enough. |
 | OpenBMB | MiniCPM-o / Omni / VoxCPM voice path | under 32B | Tiny Quest Radio | Candidate for voice, TTS, and omni interaction. |
-| Black Forest Labs | `black-forest-labs/FLUX.1-Kontext-dev` | 12B | Flux Costume Booth | Image editing from text instructions; strong creative demo fit. |
-| Black Forest Labs | Flux LoRA fine-tuning path | adapter | Flux Costume Booth | Modal-backed fine-tune route for Well-Tuned badge. |
+| Black Forest Labs | `black-forest-labs/FLUX.2-klein` | 4B / 9B | Flux Costume Booth | Image generation and editing; small enough to fine-tune with LoRA in an hour. |
+| Black Forest Labs | FLUX.2 [klein] LoRA fine-tuning path | adapter | Flux Costume Booth | Modal-backed fine-tune route for Well-Tuned badge. |
 | JetBrains | `JetBrains/Milo-2-12B` | 12B | Roast My Repo | Code-focused model for repo review and developer tooling. |
 | Cohere | Cohere Transcribe | 2B | Tiny Quest Radio, accessibility docs | Low-latency ASR path. |
-| Cohere | Tiny multilingual LLM family | 3.3B | NeighborDocs, Pocket Tutor | Translation, summarization, cross-lingual explanation. |
+| Cohere | Tiny Aya multilingual LLM family | 3.35B | NeighborDocs, Pocket Tutor | Cohere's official multilingual family (Global/Water/Fire/Earth) covering 70+ languages. |
 | Modal | Modal sandboxes and GPU jobs | platform | Fine-tune, batch jobs, repo sandboxing | Use for work that directly improves prize odds. |
 | OpenAI | Codex / GitHub commit history | toolchain | All projects | Maintain visible Codex-authored commits for OpenAI sponsor evaluation. |
 

@@ -26,8 +26,8 @@ Image upload + theme
 
 ## Model plan
 
-- Eligible FLUX model path from Black Forest Labs sponsor guidance.
-- Optional LoRA trained with AI Toolkit for a distinctive style.
+- Black Forest Labs FLUX.2 [klein] (4B/9B) model path.
+- Optional FLUX.2 [klein] LoRA trained with AI Toolkit for a distinctive style.
 - Modal credits may be used for LoRA training if it improves the final demo.
 
 ## Implementation phases

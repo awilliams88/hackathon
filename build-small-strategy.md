@@ -35,7 +35,7 @@ Suggested models:
 
 - `nvidia/nemotron-parse` family for document parsing.
 - MiniCPM-V 4.5/4.6 or small VLM fallback for image understanding.
-- Cohere Tiny variants for multilingual text.
+- Cohere Tiny Aya family (3.35B) for multilingual text.
 
 ### 2. Pocket Tutor From Photos
 
@@ -56,7 +56,7 @@ Suggested models:
 
 - MiniCPM-V 4.6 for image/OCR.
 - MiniCPM 1B/4B text model for explanations.
-- Cohere Tiny Fire for South Asian language support if targeting India.
+- Cohere Tiny Aya family (3.35B) (e.g. Aya Fire/Global) for multilingual support.
 
 ### 3. Flux Costume Booth
 
@@ -68,14 +68,14 @@ Why it can win: Direct Black Forest Labs alignment and high social/demo appeal. 
 
 Sponsor/award mapping:
 
-- Black Forest Labs: FLUX.1 Kontext/Flux tiny-bit image generation/editing path.
+- Black Forest Labs: FLUX.2 [klein] image generation/editing path.
 - Well-Tuned: LoRA on a compact style if time allows.
 - Off-Brand: custom Gradio/`gr.Server` UI.
 - Community Choice: shareable outputs.
 
 Suggested models:
 
-- BFL FLUX small/eligible model path from sponsor docs.
+- BFL FLUX.2 [klein] (4B/9B) model path.
 - Optional LoRA via AI Toolkit if we can train a style fast.
 
 ### 4. Tiny Quest Radio
