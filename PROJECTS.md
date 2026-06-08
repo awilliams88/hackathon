@@ -7,10 +7,10 @@ This file tracks the submission portfolio and the current build priority.
 | Project | Track | Sponsors | Prize / Badge Targets | Status |
 | --- | --- | --- | --- | --- |
 | **InnerSpace** | Backyard AI | OpenBMB, OpenAI | OpenBMB, OpenAI, Tiny Titan, Well-Tuned, Off-Brand | Completed |
-| **Pocket Tutor** | Backyard AI | OpenBMB | OpenBMB, Backyard AI, Best Agent, Off-Brand | Planned |
-| **Flux Costume Booth** | Thousand Token Wood | Black Forest Labs, Modal | BFL, Modal, Well-Tuned, Off-Brand, Best Demo | Planned |
-| **Tiny Quest Radio** | Thousand Token Wood | Cohere | Cohere, Llama Champion, Off the Grid, Tiny Titan | Planned |
-| **Roast My Repo** | Backyard AI | JetBrains, OpenAI | JetBrains, OpenAI, Best Agent, Sharing is Caring | Planned |
+| **Pocket Tutor** | Backyard AI | OpenBMB | OpenBMB, Backyard AI, Best Agent, Off-Brand, Well-Tuned | Ready for remote push |
+| **Flux Costume Booth** | Thousand Token Wood | Black Forest Labs, Modal | BFL, Modal, Well-Tuned, Off-Brand, Best Demo | Ready for remote push |
+| **Tiny Quest Radio** | Thousand Token Wood | Cohere | Cohere, Llama Champion, Off the Grid, Tiny Titan | Ready for remote push |
+| **Roast My Repo** | Backyard AI | JetBrains, OpenAI | JetBrains, OpenAI, Best Agent, Sharing is Caring, Off-Brand | Ready for remote push |
 
 ## Project Notes
 
@@ -24,22 +24,22 @@ This file tracks the submission portfolio and the current build priority.
 
 - Concept: photo-based homework helper for students and parents.
 - Model: `openbmb/MiniCPM-V-4.6`.
-- Priority: next project after InnerSpace is submission-ready.
+- Current work: multimodal Gradio Space scaffold, speech input, structured tutoring output, and Modal QLoRA adapter path.
 
 ### Flux Costume Booth
 
 - Concept: playful portrait transformation booth.
 - Model: `black-forest-labs/FLUX.2-klein-4B` plus Modal LoRA.
-- Priority: creative track candidate.
+- Current work: portrait/text/voice costume booth, FLUX prompt generation, local generation hook, and Modal LoRA staging path.
 
 ### Tiny Quest Radio
 
 - Concept: audio-first branching adventure game.
 - Model: `CohereLabs/tiny-aya-global` quantized to GGUF.
-- Priority: Llama Champion / Tiny Titan candidate.
+- Current work: microphone command input, llama.cpp GGUF runtime hook, structured quest state, and Modal SFT/GGUF preparation path.
 
 ### Roast My Repo
 
 - Concept: repo review agent that produces a useful, shareable code-health card.
-- Model: JetBrains Mellum2 family, exact Hub slug still needs verification.
-- Priority: OpenAI and JetBrains candidate.
+- Model: `JetBrains/Mellum2-12B-A2.5B-Instruct`.
+- Current work: bounded file ingestion, speech review goals, structured code-health cards, and Modal QLoRA adapter path.

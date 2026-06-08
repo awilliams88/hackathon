@@ -38,8 +38,8 @@ badges we are targeting.
 | Project | Track | Sponsors | Badge Targets |
 | --- | --- | --- | --- |
 | InnerSpace | Backyard AI | OpenBMB, OpenAI | Well-Tuned, Off-Brand, Tiny Titan |
-| Pocket Tutor | Backyard AI | OpenBMB | Off-Brand, Best Agent |
+| Pocket Tutor | Backyard AI | OpenBMB | Off-Brand, Best Agent, Well-Tuned |
 | Flux Costume Booth | Thousand Token Wood | BFL, Modal | Well-Tuned, Off-Brand, Best Demo |
 | Tiny Quest Radio | Thousand Token Wood | Cohere | Llama Champion, Off the Grid, Tiny Titan |
-| Roast My Repo | Backyard AI | JetBrains, OpenAI | Best Agent, Sharing is Caring |
+| Roast My Repo | Backyard AI | JetBrains, OpenAI | Best Agent, Sharing is Caring, Off-Brand |
 | Modal-Tuner | Backyard AI | Modal | Bonus Quest Champion, Field Notes |

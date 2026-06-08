@@ -1,3 +1,15 @@
 [submodule "innerspace"]
 	path = innerspace
 	url = https://github.com/awilliams88/innerspace.git
+[submodule "pocket-tutor"]
+	path = pocket-tutor
+	url = https://github.com/awilliams88/pocket-tutor.git
+[submodule "flux-costume-booth"]
+	path = flux-costume-booth
+	url = https://github.com/awilliams88/flux-costume-booth.git
+[submodule "tiny-quest-radio"]
+	path = tiny-quest-radio
+	url = https://github.com/awilliams88/tiny-quest-radio.git
+[submodule "roast-my-repo"]
+	path = roast-my-repo
+	url = https://github.com/awilliams88/roast-my-repo.git

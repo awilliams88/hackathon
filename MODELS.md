@@ -12,17 +12,17 @@ All submission models must stay under the hackathon 32B parameter cap.
 | Cohere | `CohereLabs/tiny-aya-global` | 3.35B | Tiny Quest Radio narrative |
 | Cohere | Cohere Transcribe | ~2B | Tiny Quest Radio voice input |
 | Black Forest Labs | `black-forest-labs/FLUX.2-klein-4B` | 4B | Flux Costume Booth image generation |
-| JetBrains | Mellum2 family | 12B MoE | Roast My Repo code reasoning |
+| JetBrains | `JetBrains/Mellum2-12B-A2.5B-Instruct` | 12B MoE | Roast My Repo code reasoning |
 
 ## Project Mapping
 
 | Project | Primary Model | Runtime |
 | --- | --- | --- |
 | InnerSpace | `openbmb/MiniCPM5-1B-SFT` + LoRA adapter | ZeroGPU / local Space runtime |
-| Pocket Tutor | `openbmb/MiniCPM-V-4.6` | ZeroGPU multimodal |
+| Pocket Tutor | `openbmb/MiniCPM-V-4.6` + tutoring adapter | ZeroGPU multimodal |
 | Flux Costume Booth | `black-forest-labs/FLUX.2-klein-4B` + Modal LoRA | ZeroGPU or Modal |
 | Tiny Quest Radio | `CohereLabs/tiny-aya-global` GGUF | CPU via llama.cpp |
-| Roast My Repo | JetBrains Mellum2 family | ZeroGPU or local runtime |
+| Roast My Repo | `JetBrains/Mellum2-12B-A2.5B-Instruct` + review adapter | ZeroGPU or local runtime |
 | Modal-Tuner | Modal training containers | Modal GPU jobs |
 
 ## Modal Use
