@@ -3,6 +3,10 @@
 This workspace coordinates Avenium's Build Small Hackathon submissions. Each
 project is a standalone Hugging Face Space and GitHub repository.
 
+Projects that use remote model execution also keep a checked-in smoke test
+script so the deployed Space or Modal runtime can be verified against the
+current response contract after fine-tuning or dependency updates.
+
 ## Projects
 
 | Project | Track | Sponsors | GitHub | Space | Status |

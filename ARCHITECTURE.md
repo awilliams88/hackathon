@@ -98,6 +98,13 @@ Every project must support:
 
 That command should install dependencies, run Ruff format checks, run Ruff lint, run Pyright, and compile Python files.
 
+Projects with remote model execution should also include a smoke test script
+that exercises the deployed runtime or training runtime directly. Keep the
+smoke command in the project README and check in the script alongside the code
+so model-contract regressions can be reproduced later. For Hugging Face Spaces,
+prefer a live API smoke test against the deployed Space; for Modal-backed
+training or inference, prefer a `modal run ...` entrypoint.
+
 ## Code Style
 
 - Keep files small and easy to review.
